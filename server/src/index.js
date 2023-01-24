@@ -23,9 +23,9 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 /* MONGODB CONFIGUARATION AND STARTING APP */
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 6001;
 mongoose
-  .connect(process.env.MOnGODB_URL, {
+  .connect(process.env.MONGODB_URL, {
     usenewUrlParser: true,
     useUnifiedTopology: true,
     dbName: "Surge",
@@ -47,12 +47,3 @@ mongoose
 app.use("/api", (req, res) => {
   res.json({ message: "Hi" });
 });
-// static files (build of your frontend)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client", "build")));
-  app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "..//client", "build", "index.html"));
-  });
-}
-//*exporting app object to vercel
-module.exports = app;

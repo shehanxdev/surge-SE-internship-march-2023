@@ -9,16 +9,17 @@
     "helmet": "^6.0.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.8.0",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.20"
+    "morgan": "^1.10.0"
   },
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "dev": "nodemon --exec babel-node src/index.js",
+    "build": "babel src -d dist",
+    "start": "node dist/index.js",
+    "both-dev": "concurrently \"npm run dev\" \"npm --prefix ../client/ run dev\""
   },
   "keywords": [
     "Social media",
@@ -29,6 +30,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "terminal-kit": "^3.0.0"
+    "terminal-kit": "^3.0.0",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/node": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "concurrently": "^7.5.0",
+    "nodemon": "^2.0.20"
   }
 }
