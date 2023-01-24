@@ -11,7 +11,7 @@ const { fileURLToPath } = require("url");
 const terminal_kit = require("terminal-kit");
 
 /* CONFIGURATIONS */
-dotenv.config({ path: __dirname + "/.env" });
+dotenv.config();
 const app = express();
 const terminal = terminal_kit.terminal;
 app.use(express.json());
@@ -34,7 +34,6 @@ mongoose
     terminal.bold.green("MongoDB is connected\n");
     if (PORT) {
       app.listen(PORT, () => {
-        console.log(__dirname);
         terminal.blue.bold(`App is listening at the port ${PORT}`);
       });
     }
@@ -49,12 +48,5 @@ app.use("/api", (req, res) => {
   res.json({ message: "Hi" });
 });
 
-// static files (build of the frontend)
-if (process.env.NODE_ENV == "PRODUCTION") {
-  app.use(express.static(path.join(__dirname + "../client", "build")));
-  app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname + "../client/build/index.html"));
-  });
-}
 //*exporting app object to vercel
-// module.exports = app;
+module.exports = app;
