@@ -7,9 +7,11 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   const [state, setState] = useState("");
   useEffect(() => {
+    console.log("inside useeffect");
     axios
       .get("https://surge-internship-assignment-server.onrender.com/api")
       .then((result) => {
+        console.log(result.data);
         setState(result.data.message);
       });
   }, []);
