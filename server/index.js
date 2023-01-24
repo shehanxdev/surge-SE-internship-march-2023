@@ -40,13 +40,19 @@ mongoose
   })
   .catch((error) => {
     terminal.bold.red(
-      "Did not connect to the database. ERROR: " + error + "\n"
+      "Did not connect to the database due to ERROR: " + error + "\n"
     );
   });
 /* CONFIGUARING ROUTES */
 app.use("/api", (req, res) => {
   res.json({ message: "Hi" });
 });
-
+// static files (build of your frontend)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client", "build")));
+  app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "..//client", "build", "index.html"));
+  });
+}
 //*exporting app object to vercel
 module.exports = app;

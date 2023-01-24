@@ -7,7 +7,8 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   const [state, setState] = useState("");
   useEffect(() => {
-    axios.get("http://localhost:3001/api").then((result) => {
+    console.log(process.env.REACT_APP_API_URL);
+    axios.get(process.env.REACT_APP_API_URL).then((result) => {
       setState(result.data.message);
     });
   }, []);
