@@ -7,10 +7,11 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   const [state, setState] = useState("");
   useEffect(() => {
-    console.log(process.env.REACT_APP_API_URL);
-    axios.get(process.env.REACT_APP_API_URL).then((result) => {
-      setState(result.data.message);
-    });
+    axios
+      .get("https://surge-internship-assignment-server.onrender.com/api")
+      .then((result) => {
+        setState(result.data.message);
+      });
   }, []);
   return (
     <div className="App">
