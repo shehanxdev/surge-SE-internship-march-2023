@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [state, setState] = useState("");
+  console.log("inside the app with a state of " + state);
   useEffect(() => {
     console.log("inside useeffect");
     axios
