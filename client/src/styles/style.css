@@ -1,0 +1,25 @@
+html,
+body,
+#root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.custom-banner h1 {
+  color: #ff3841;
+}
+
+.custom-login {
+  background-image: url(../../public/Images/Background_for_login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-banner {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    text-align: center !important;
+  }
+}/*# sourceMappingURL=style.css.map */
