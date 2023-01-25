@@ -1,26 +1,23 @@
+//IMPORTING MODULES
 import { BrowserRouter } from "react-router-dom";
 import AuthenticationPage from "./pages/AuthenticationPage";
-//STYLESHEETS
+import { ClerkProvider, SignedIn, SignedOut, SignIn } from "@clerk/clerk-react";
 //STYLESHEETS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/style.css";
 
 function App() {
-  // const [state, setState] = useState("");
-  // console.log("inside the app with a state of " + state);
-  // useEffect(() => {
-  //   console.log("inside useeffect");
-  //   axios
-  //     .get("https://surge-internship-assignment-server.onrender.com/api")
-  //     .then((result) => {
-  //       console.log(result.data);
-  //       setState(result.data.message);
-  //     });
-  // }, []);
+  const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+
   return (
-    <div className="App h-100">
-      <AuthenticationPage />
-    </div>
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <SignedOut>
+        <div className="App h-100">
+          <AuthenticationPage />
+        </div>
+      </SignedOut>
+      <SignedIn>Hello</SignedIn>
+    </ClerkProvider>
   );
 }
 

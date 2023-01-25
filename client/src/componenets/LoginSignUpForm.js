@@ -4,8 +4,8 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Login from "./Login";
-import Signup from "./Signup";
+import LoginForm from "./LoginForm";
+import SignupForm from "./SignupForm";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,10 +60,10 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <Login />
+        <LoginForm />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Signup />
+        <SignupForm />
       </TabPanel>
     </Box>
   );

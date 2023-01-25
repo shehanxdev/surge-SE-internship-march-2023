@@ -15,11 +15,27 @@ body,
   background-repeat: no-repeat;
 }
 
+.cl-internal-b3fm6y,
+.cl-footer {
+  display: none !important;
+}
+
+.cl-rootBox,
+.cl-card {
+  width: 100% !important;
+  margin: auto;
+}
+
 @media screen and (max-width: 768px) {
   .custom-banner {
     height: -webkit-fit-content !important;
     height: -moz-fit-content !important;
     height: fit-content !important;
     text-align: center !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .css-s5qya8 {
+    width: 400px !important;
   }
 }/*# sourceMappingURL=style.css.map */

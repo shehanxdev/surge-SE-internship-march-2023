@@ -13,10 +13,25 @@ body,
   background-size: cover;
   background-repeat: no-repeat;
 }
+.cl-internal-b3fm6y,
+.cl-footer {
+  display: none !important;
+}
+.cl-rootBox,
+.cl-card {
+  width: 100% !important;
+  margin: auto;
+}
+
 //MEDIA QUERIES
 @media screen and (max-width: 768px) {
   .custom-banner {
     height: fit-content !important;
     text-align: center !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .css-s5qya8 {
+    width: 400px !important;
   }
 }
