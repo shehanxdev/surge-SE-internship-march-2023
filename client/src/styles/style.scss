@@ -13,6 +13,11 @@ body,
   background-size: cover;
   background-repeat: no-repeat;
 }
+.custom-close-button {
+  position: absolute !important;
+  right: 0 !important;
+  z-index: 100 !important;
+}
 .cl-internal-b3fm6y,
 .cl-footer {
   display: none !important;
