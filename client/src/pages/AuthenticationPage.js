@@ -7,6 +7,7 @@ import LoginSignUpForm from "./../componenets/LoginSignUpForm";
 //MUI COMPONENETS
 import Modal from "@mui/joy/Modal";
 import ModalDialog from "@mui/joy/ModalDialog";
+import { fontSize } from "@mui/system";
 
 function AuthenticationPage() {
   const [open, setOpen] = useState(true);
@@ -22,8 +23,10 @@ function AuthenticationPage() {
           <span>
             <b>
               {" "}
-              Please verify you are human. Robots are not welcome &#40; Sorry
-              Robots&#41;
+              <span style={{ fontSize: "20px" }}>
+                Please verify you are human.
+              </span>{" "}
+              <br /> Robots are not welcome &#40;🤖 Sorry Robots&#41;
             </b>
           </span>
           <ReCaptcha
