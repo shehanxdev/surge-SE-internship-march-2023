@@ -29,8 +29,8 @@ export default function ProfileDrawer() {
   };
 
   return (
-    <div>
-      <div className="p-5">
+    <div className="position-fixed">
+      <div className="p-5  m-5 custom-profile-card">
         <Avatar
           src={user.profileImageUrl}
           sx={{ height: 80, width: 80, margin: "auto" }}

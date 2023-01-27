@@ -21,6 +21,20 @@ body,
   z-index: 100 !important;
 }
 
+.custom-profile-card {
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.custom-post-card span {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .cl-internal-b3fm6y,
 .cl-footer {
   display: none !important;

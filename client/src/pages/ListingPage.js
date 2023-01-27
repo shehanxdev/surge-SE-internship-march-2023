@@ -12,7 +12,7 @@ function ListingPage() {
         <ListingSection />
       </div>
 
-      <div className="col md-4">
+      <div className="col md-4 position-relative">
         <ProfileDrawer />
       </div>
     </div>
