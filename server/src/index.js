@@ -44,9 +44,7 @@ mongoose
     );
   });
 /* CONFIGUARING ROUTES */
-app.get("/api", (req, res) => {
-  res.json({ message: "Hi" });
-});
+//*Health check API for render.com
 app.get("/health", (req, res) => {
   res.status(200).json({ message: "OK" });
 });

@@ -11,7 +11,8 @@ import { useUser } from "@clerk/clerk-react";
 export default function ProfileDrawer() {
   const [open, setOpen] = useState(false);
   const { user } = useUser();
-  console.log(user.username);
+
+  // Function to toggle the drawer open or closed
   const toggleDrawer = (open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -22,6 +23,7 @@ export default function ProfileDrawer() {
     setOpen(open);
   };
 
+  // Function to close the drawer
   const closeDrawer = () => {
     setOpen(false);
   };
@@ -35,7 +37,7 @@ export default function ProfileDrawer() {
         />
         {<span>{user.primaryEmailAddress.emailAddress}</span>}
         <br />
-        {/* Checks whether the username is empty */}
+        {/* Check if the username is empty and display appropriate content */}
         {user.username ? (
           user.username
         ) : (
