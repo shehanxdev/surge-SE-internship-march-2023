@@ -28,6 +28,7 @@ app.use(cors());
 
 /* MONGODB CONFIGUARATION AND STARTING APP */
 const PORT = process.env.PORT || 6001;
+
 mongoose
   .connect(process.env.MONGODB_URL, {
     usenewUrlParser: true,
@@ -64,3 +65,6 @@ app.get("/health", (req, res) => {
 });
 
 app.use("/posts", postRoutes);
+
+//MODULE EXPORTS
+module.exports = app;
