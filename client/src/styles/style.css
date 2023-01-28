@@ -67,6 +67,10 @@ body,
   top: 130px;
 }
 
+.css-s5qya8 {
+  width: 400px !important;
+}
+
 .cl-userProfile-root {
   z-index: 100;
   position: relative;
@@ -141,8 +145,11 @@ body,
     background-color: #cfcfcf;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 500px) {
   .css-s5qya8 {
-    width: 400px !important;
+    margin: 15px !important;
+  }
+  .cl-internal-bd23vi {
+    padding: 0 !important;
   }
 }/*# sourceMappingURL=style.css.map */

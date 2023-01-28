@@ -36,10 +36,10 @@ function AuthenticationPage() {
           />
         </ModalDialog>
       </Modal>
-      <div className="col-md-6 row h-100 justify-content-center align-items-center custom-login">
+      <div className="col-lg-6 d-flex h-100 justify-content-center align-items-center custom-login ">
         <LoginSignUpForm />
       </div>
-      <div className="col-md-6 row flex-column h-100 justify-content-center custom-banner gy-2  text-center">
+      <div className="col-lg-6 row flex-column h-100 justify-content-center custom-banner gy-2  text-center">
         <LoginBanner />
       </div>
       <div className="text-center ">Made with ❤️ by Shehan Chanuka</div>
