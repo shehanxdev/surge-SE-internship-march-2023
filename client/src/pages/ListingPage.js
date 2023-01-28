@@ -8,14 +8,14 @@ function ListingPage() {
 
   return (
     <div className="row h-100 justify-content-center  text-center">
-      <div className="col md-2 ">
+      <div className="col md-2 custom-side-nav">
         <SideNavBar />
       </div>
       <div className="col-md-6 pt-5 ">
         <ListingSection />
       </div>
 
-      <div className="col mt-4 position-relative">
+      <div className="col mt-4 position-relative custom-profile-drawer">
         <ProfileDrawer />
       </div>
     </div>

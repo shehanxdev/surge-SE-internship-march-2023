@@ -55,6 +55,10 @@ body,
   width: 50px !important;
   height: 50px;
 }
+.custom-profile-drawer > div {
+  right: 0;
+  top: 130px;
+}
 // .custom-side-nav {
 //   box-shadow: 10px 0px 50px 0px rgba(110, 110, 110, 0.233);
 //   width: 300px;
@@ -83,6 +87,9 @@ body,
 .cl-card {
   box-shadow: none;
 }
+.custom-app-bar .cl-userButton-root {
+  display: none;
+}
 .JoyModalDialog-root {
   background-color: white !important;
 
@@ -90,10 +97,46 @@ body,
   box-shadow: 0px 0px 18px 13px #0000003b !important;
 }
 //MEDIA QUERIES
+@media screen and(max-width:1150px) {
+  .custom-profile-drawer > div {
+    display: none;
+  }
+  .custom-app-bar .cl-userButton-root {
+    width: fit-content !important;
+    margin: 0 !important;
+    display: initial;
+  }
+  .css-1mbvec5-MuiPaper-root-MuiAppBar-root {
+    align-items: center;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .custom-banner {
     height: fit-content !important;
     text-align: center !important;
+  }
+  .custom-side-nav {
+    display: none;
+  }
+  .custom-post-card hr,
+  .custom-post-card p,
+  .custom-post-card img,
+  .custom-post-card div {
+    width: 90% !important;
+    font-size: 12px;
+  }
+  .custom-post-card .custom-avatar {
+    width: 40px !important;
+    height: 40px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .cl-userButton-popover {
+    background-color: #cfcfcf;
   }
 }
 @media screen and (min-width: 992px) {

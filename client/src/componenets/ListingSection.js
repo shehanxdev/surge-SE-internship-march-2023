@@ -52,7 +52,11 @@ function ListingSection() {
 
           <SubMenuForPosts />
         </div>
-        <img src={post.picturepath} alt="Image placeholder" />
+        <img
+          className="custom-post-img"
+          src={post.picturepath}
+          alt="Image placeholder"
+        />
         <div className="row flex-row justify-content-between mt-2 mb-2">
           <span className="w-25">
             <FavoriteIcon sx={{ color: "#ff3841" }} />
