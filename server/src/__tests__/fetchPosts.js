@@ -7,7 +7,7 @@ const isSorted = (arr) => {
   for (let i = 0; i < arr.length - 1; i++) {
     const current = arr[i];
     const next = arr[i + 1];
-
+    console.log("hello");
     if (current.createdAt < next.createdAt) {
       return false;
     }
@@ -21,7 +21,7 @@ const isSorted = (arr) => {
 describe("GET /posts", () => {
   it("should fetch all posts and sort them according to timestamp and likes", async () => {
     const res = await request(app).get("/posts").expect(200);
-    console.log(res.body);
+
     expect(isSorted(res.body.slice(0, 10))).toStrictEqual(true);
   });
 });
