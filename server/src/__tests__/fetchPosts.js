@@ -1,6 +1,6 @@
 const request = require("supertest");
 //*Only uncomment below import for local testing. GitHub will build and run application during CI automatically.
-// const app = require("../index");
+const app = require("../index");
 
 //Custom sort testing function which tests the order of received posts
 const isSorted = (arr) => {
