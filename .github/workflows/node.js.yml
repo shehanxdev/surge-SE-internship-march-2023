@@ -54,3 +54,4 @@ jobs:
       - run: npm test
         env:
           MONGODB_URL: "mongodb+srv://shehanxdev:6PEQqdR8dE6lPViG@surgecluster0.vyqlckc.mongodb.net/?retryWrites=true&w=majority"
+      - run: exit
