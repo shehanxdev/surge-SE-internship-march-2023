@@ -10,8 +10,8 @@ const path = require("path");
 const { fileURLToPath } = require("url");
 const terminal_kit = require("terminal-kit");
 //Only uncomment following code if you want to insert posts into mongo DB. Posts are fake posts generated with faker.js
-// const postgenerator = require("./data/fakeDataGenerator.js");
-// const Post = require("./models/posts");
+const postgenerator = require("./data/fakeDataGenerator.js");
+const Post = require("./models/posts");
 /* ROUTES */
 const postRoutes = require("./routes/postRoutes");
 /* CONFIGURATIONS */
@@ -40,14 +40,14 @@ mongoose
     if (PORT) {
       app.listen(PORT, () => {
         //*Only uncomment following code if you want to insert posts into mongo DB. Posts are fake posts generated with faker.js
-        // const posts = postgenerator(20);
-        // Post.insertMany(posts)
-        //   .then(() => {
-        //     "data Iserted";
-        //   })
-        //   .catch((err) => {
-        //     console.log(err);
-        //   });
+        const posts = postgenerator(20);
+        Post.insertMany(posts)
+          .then(() => {
+            "data Iserted";
+          })
+          .catch((err) => {
+            console.log(err);
+          });
 
         terminal.blue.bold(`App is listening at the port ${PORT}`);
       });

@@ -6,6 +6,8 @@ import { ClerkProvider, SignedIn, SignedOut, SignIn } from "@clerk/clerk-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/style.css";
 import ListingPage from "./pages/ListingPage";
+import { AppBar } from "@mui/material";
+import TopNav from "./componenets/TopNav";
 
 function App() {
   const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
@@ -19,6 +21,7 @@ function App() {
       </SignedOut>
       <SignedIn>
         <div className="h-100">
+          <TopNav />
           <ListingPage />
         </div>
       </SignedIn>

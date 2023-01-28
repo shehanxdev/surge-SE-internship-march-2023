@@ -42,6 +42,7 @@ function AuthenticationPage() {
       <div className="col-md-6 row flex-column h-100 justify-content-center custom-banner gy-2  text-center">
         <LoginBanner />
       </div>
+      <div className="text-center ">Made with ❤️ by Shehan Chanuka</div>
     </div>
   );
 }
