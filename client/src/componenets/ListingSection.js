@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 //HELPER FUNCTIONS
 import formatDate from "../helpers/formatDate";
-//TEMP IMAGE
-import IMG from "../data/feliphe-schiarolli-FiuoiImpa3s-unsplash.jpg";
+
 //MUI icons
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
